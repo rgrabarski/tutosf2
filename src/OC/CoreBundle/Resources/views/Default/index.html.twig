@@ -1,0 +1,12 @@
+{% extends "OCCoreBundle::layout.html.twig" %}
+
+{% block occore_index %}
+    <h1>Page d'accueil du site</h1>
+
+    {# Affichage des 3 dernières annonces #}
+    <div id="menu" class="col-md-3">
+        <h3>Dernières annonces</h3>
+        {{ render(controller("OCPlatformBundle:Advert:menu", {'limit': 3})) }}
+    </div>
+
+{% endblock %}
